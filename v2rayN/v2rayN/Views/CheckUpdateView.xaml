@@ -16,30 +16,35 @@
     mc:Ignorable="d">
 
     <DockPanel Margin="{StaticResource Margin8}">
-        <StackPanel
-            Margin="{StaticResource Margin8}"
-            HorizontalAlignment="Right"
+
+        <Border
+            Margin="{StaticResource Margin4}"
+            VerticalAlignment="Center"
             DockPanel.Dock="Bottom"
-            Orientation="Horizontal">
+            Style="{StaticResource CardBorder}">
 
-            <TextBlock
-                Margin="{StaticResource Margin8}"
-                VerticalAlignment="Center"
-                Style="{StaticResource ToolbarTextBlock}"
-                Text="{x:Static resx:ResUI.TbSettingsEnableCheckPreReleaseUpdate}" />
-            <ToggleButton
-                x:Name="togEnableCheckPreReleaseUpdate"
-                Margin="{StaticResource Margin8}"
-                HorizontalAlignment="Left" />
+            <StackPanel
+                Margin="{StaticResource Margin4}"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
 
-            <Button
-                x:Name="btnCheckUpdate"
-                Width="100"
-                Margin="{StaticResource Margin8}"
-                Content="{x:Static resx:ResUI.menuCheckUpdate}"
-                IsDefault="True"
-                Style="{StaticResource DefButton}" />
-        </StackPanel>
+                <TextBlock
+                    Margin="{StaticResource Margin4}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="{x:Static resx:ResUI.TbSettingsEnableCheckPreReleaseUpdate}" />
+                <ToggleButton
+                    x:Name="togEnableCheckPreReleaseUpdate"
+                    Margin="{StaticResource Margin4}"
+                    HorizontalAlignment="Left" />
+
+                <Button
+                    x:Name="btnCheckUpdate"
+                    Width="100"
+                    Margin="{StaticResource Margin4}"
+                    Content="{x:Static resx:ResUI.menuCheckUpdate}" />
+            </StackPanel>
+        </Border>
 
         <StackPanel>
             <ListView

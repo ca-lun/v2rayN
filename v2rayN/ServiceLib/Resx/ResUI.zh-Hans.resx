@@ -411,14 +411,8 @@
   <data name="menuGlobalHotkeySetting" xml:space="preserve">
     <value>全局热键设置</value>
   </data>
-  <data name="menuHelp" xml:space="preserve">
-    <value>帮助</value>
-  </data>
   <data name="menuOptionSetting" xml:space="preserve">
     <value>参数设置</value>
-  </data>
-  <data name="menuPromotion" xml:space="preserve">
-    <value>推广</value>
   </data>
   <data name="menuReload" xml:space="preserve">
     <value>重启服务</value>

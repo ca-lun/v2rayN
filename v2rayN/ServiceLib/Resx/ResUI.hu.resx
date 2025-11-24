@@ -411,14 +411,8 @@
   <data name="menuGlobalHotkeySetting" xml:space="preserve">
     <value>Globális gyorsbillentyű beállítás</value>
   </data>
-  <data name="menuHelp" xml:space="preserve">
-    <value>Súgó</value>
-  </data>
   <data name="menuOptionSetting" xml:space="preserve">
     <value>Opció beállítás</value>
-  </data>
-  <data name="menuPromotion" xml:space="preserve">
-    <value>Promóció</value>
   </data>
   <data name="menuReload" xml:space="preserve">
     <value>Újratöltés</value>

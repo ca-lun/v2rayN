@@ -1141,15 +1141,6 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 Help 的本地化字符串。
-        /// </summary>
-        public static string menuHelp {
-            get {
-                return ResourceManager.GetString("menuHelp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Import Rules From Clipboard 的本地化字符串。
         /// </summary>
         public static string menuImportRulesFromClipboard {
@@ -1362,15 +1353,6 @@ namespace ServiceLib.Resx {
         public static string menuProfileAutofitColumnWidth {
             get {
                 return ResourceManager.GetString("menuProfileAutofitColumnWidth", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Promotion 的本地化字符串。
-        /// </summary>
-        public static string menuPromotion {
-            get {
-                return ResourceManager.GetString("menuPromotion", resourceCulture);
             }
         }
         

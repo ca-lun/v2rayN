@@ -411,14 +411,8 @@
   <data name="menuGlobalHotkeySetting" xml:space="preserve">
     <value>全域快速鍵設定</value>
   </data>
-  <data name="menuHelp" xml:space="preserve">
-    <value>說明</value>
-  </data>
   <data name="menuOptionSetting" xml:space="preserve">
     <value>參數設定</value>
-  </data>
-  <data name="menuPromotion" xml:space="preserve">
-    <value>推廣</value>
   </data>
   <data name="menuReload" xml:space="preserve">
     <value>重啟服務</value>
