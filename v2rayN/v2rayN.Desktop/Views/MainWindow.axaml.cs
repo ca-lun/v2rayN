@@ -402,8 +402,8 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
     {
         var bl = blShow ??
                     (Utils.IsLinux()
-                    ? (!_config.UiItem.ShowInTaskbar ^ (WindowState == WindowState.Minimized))
-                    : !_config.UiItem.ShowInTaskbar);
+                    ? (!AppManager.Instance.ShowInTaskbar ^ (WindowState == WindowState.Minimized))
+                    : !AppManager.Instance.ShowInTaskbar);
         if (bl)
         {
             Show();
@@ -429,7 +429,7 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
             Hide();
         }
 
-        _config.UiItem.ShowInTaskbar = bl;
+        AppManager.Instance.ShowInTaskbar = bl;
     }
 
     protected override void OnLoaded(object? sender, RoutedEventArgs e)

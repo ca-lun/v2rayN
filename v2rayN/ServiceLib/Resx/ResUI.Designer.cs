@@ -79,15 +79,6 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 ALPN must contain &apos;http/1.1&apos; when using WebSocket with TLS. 的本地化字符串。
-        /// </summary>
-        public static string AlpnMustContainHttp11ForWsTls {
-            get {
-                return ResourceManager.GetString("AlpnMustContainHttp11ForWsTls", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Export share link to clipboard successfully 的本地化字符串。
         /// </summary>
         public static string BatchExportURLSuccessfully {
@@ -2778,6 +2769,24 @@ namespace ServiceLib.Resx {
         public static string TbDomesticDNS {
             get {
                 return ResourceManager.GetString("TbDomesticDNS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 EchConfigList 的本地化字符串。
+        /// </summary>
+        public static string TbEchConfigList {
+            get {
+                return ResourceManager.GetString("TbEchConfigList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 EchForceQuery 的本地化字符串。
+        /// </summary>
+        public static string TbEchForceQuery {
+            get {
+                return ResourceManager.GetString("TbEchForceQuery", resourceCulture);
             }
         }
         
