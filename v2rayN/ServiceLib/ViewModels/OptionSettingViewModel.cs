@@ -95,7 +95,6 @@ public class OptionSettingViewModel : MyReactiveObject
     [Reactive] public bool TunStrictRoute { get; set; }
     [Reactive] public string TunStack { get; set; }
     [Reactive] public int TunMtu { get; set; }
-    [Reactive] public bool TunEnableExInbound { get; set; }
     [Reactive] public bool TunEnableIPv6Address { get; set; }
 
     #endregion Tun mode
@@ -108,6 +107,7 @@ public class OptionSettingViewModel : MyReactiveObject
     [Reactive] public string CoreType4 { get; set; }
     [Reactive] public string CoreType5 { get; set; }
     [Reactive] public string CoreType6 { get; set; }
+    [Reactive] public string CoreType7 { get; set; }
     [Reactive] public string CoreType9 { get; set; }
 
     #endregion CoreType
@@ -219,7 +219,6 @@ public class OptionSettingViewModel : MyReactiveObject
         TunStrictRoute = _config.TunModeItem.StrictRoute;
         TunStack = _config.TunModeItem.Stack;
         TunMtu = _config.TunModeItem.Mtu;
-        TunEnableExInbound = _config.TunModeItem.EnableExInbound;
         TunEnableIPv6Address = _config.TunModeItem.EnableIPv6Address;
 
         #endregion Tun mode
@@ -274,6 +273,10 @@ public class OptionSettingViewModel : MyReactiveObject
 
                 case 6:
                     CoreType6 = type;
+                    break;
+
+                case 7:
+                    CoreType7 = type;
                     break;
 
                 case 9:
@@ -375,7 +378,6 @@ public class OptionSettingViewModel : MyReactiveObject
         _config.TunModeItem.StrictRoute = TunStrictRoute;
         _config.TunModeItem.Stack = TunStack;
         _config.TunModeItem.Mtu = TunMtu;
-        _config.TunModeItem.EnableExInbound = TunEnableExInbound;
         _config.TunModeItem.EnableIPv6Address = TunEnableIPv6Address;
 
         //coreType
@@ -425,6 +427,10 @@ public class OptionSettingViewModel : MyReactiveObject
 
                 case 6:
                     type = CoreType6;
+                    break;
+
+                case 7:
+                    type = CoreType7;
                     break;
 
                 case 9:

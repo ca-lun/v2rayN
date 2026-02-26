@@ -56,7 +56,7 @@ public class ProfilesViewModel : MyReactiveObject
 
     public ReactiveCommand<Unit, Unit> MoveUpCmd { get; }
     public ReactiveCommand<Unit, Unit> MoveDownCmd { get; }
-    public ReactiveCommand<Unit, Unit> MoveBottomCmd { get; } 
+    public ReactiveCommand<Unit, Unit> MoveBottomCmd { get; }
     public ReactiveCommand<SubItem, Unit> MoveToGroupCmd { get; }
 
     //servers ping
@@ -428,7 +428,7 @@ public class ProfilesViewModel : MyReactiveObject
 
     private async Task<List<ProfileItemModel>?> GetProfileItemsEx(string subid, string filter)
     {
-        var lstModel = await AppManager.Instance.ProfileItems(_config.SubIndexId, filter);
+        var lstModel = await AppManager.Instance.ProfileModels(_config.SubIndexId, filter);
 
         await ConfigHandler.SetDefaultServer(_config, lstModel);
 
@@ -446,7 +446,7 @@ public class ProfilesViewModel : MyReactiveObject
                         Remarks = t.Remarks,
                         Address = t.Address,
                         Port = t.Port,
-                        Security = t.Security,
+                        //Security = t.Security,
                         Network = t.Network,
                         StreamSecurity = t.StreamSecurity,
                         Subid = t.Subid,
@@ -801,7 +801,8 @@ public class ProfilesViewModel : MyReactiveObject
 
         if (blClipboard)
         {
-            var result = await CoreConfigHandler.GenerateClientConfig(item, null);
+            var context = await CoreConfigHandler.BuildCoreConfigContext(_config, item);
+            var result = await CoreConfigHandler.GenerateClientConfig(context, null);
             if (result.Success != true)
             {
                 NoticeManager.Instance.Enqueue(result.Msg);
@@ -824,7 +825,8 @@ public class ProfilesViewModel : MyReactiveObject
         {
             return;
         }
-        var result = await CoreConfigHandler.GenerateClientConfig(item, fileName);
+        var context = await CoreConfigHandler.BuildCoreConfigContext(_config, item);
+        var result = await CoreConfigHandler.GenerateClientConfig(context, fileName);
         if (result.Success != true)
         {
             NoticeManager.Instance.Enqueue(result.Msg);

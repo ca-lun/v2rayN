@@ -1663,6 +1663,15 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
+        ///   查找类似 Configuration item preview 的本地化字符串。
+        /// </summary>
+        public static string menuServerListPreview {
+            get {
+                return ResourceManager.GetString("menuServerListPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Configuration 的本地化字符串。
         /// </summary>
         public static string menuServers {
@@ -2599,7 +2608,7 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 Server Certificate (PEM format, optional)
+        ///   查找类似 Pinned certificate (fill in either one)
         ///When specified, the certificate will be pinned, and &quot;Allow Insecure&quot; will be disabled.
         ///
         ///The &quot;Get Certificate&quot; action may fail if a self-signed certificate is used or if the system contains an untrusted or malicious CA. 的本地化字符串。
@@ -2607,6 +2616,15 @@ namespace ServiceLib.Resx {
         public static string TbCertPinningTips {
             get {
                 return ResourceManager.GetString("TbCertPinningTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Certificate fingerprint (SHA-256) 的本地化字符串。
+        /// </summary>
+        public static string TbCertSha256Tips {
+            get {
+                return ResourceManager.GetString("TbCertSha256Tips", resourceCulture);
             }
         }
         
@@ -2701,6 +2719,24 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
+        ///   查找类似 Direct Target Resolution Strategy 的本地化字符串。
+        /// </summary>
+        public static string TbDirectResolveStrategy {
+            get {
+                return ResourceManager.GetString("TbDirectResolveStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 If unset or &quot;AsIs&quot;, DNS resolution uses the system DNS; otherwise, the internal DNS module is used. 的本地化字符串。
+        /// </summary>
+        public static string TbDirectResolveStrategyTips {
+            get {
+                return ResourceManager.GetString("TbDirectResolveStrategyTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Display GUI 的本地化字符串。
         /// </summary>
         public static string TbDisplayGUI {
@@ -2769,6 +2805,15 @@ namespace ServiceLib.Resx {
         public static string TbDomesticDNS {
             get {
                 return ResourceManager.GetString("TbDomesticDNS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 By default, invoked only during routing for resolution 的本地化字符串。
+        /// </summary>
+        public static string TbDomesticDNSTips {
+            get {
+                return ResourceManager.GetString("TbDomesticDNSTips", resourceCulture);
             }
         }
         
@@ -2854,6 +2899,15 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
+        ///   查找类似 Finalmask 的本地化字符串。
+        /// </summary>
+        public static string TbFinalmask {
+            get {
+                return ResourceManager.GetString("TbFinalmask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Fingerprint 的本地化字符串。
         /// </summary>
         public static string TbFingerprint {
@@ -2868,6 +2922,15 @@ namespace ServiceLib.Resx {
         public static string TbFlow5 {
             get {
                 return ResourceManager.GetString("TbFlow5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Full certificate (chain), PEM format 的本地化字符串。
+        /// </summary>
+        public static string TbFullCertTips {
+            get {
+                return ResourceManager.GetString("TbFullCertTips", resourceCulture);
             }
         }
         
@@ -2931,6 +2994,15 @@ namespace ServiceLib.Resx {
         public static string TbHeaderType8 {
             get {
                 return ResourceManager.GetString("TbHeaderType8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Port hopping interval 的本地化字符串。
+        /// </summary>
+        public static string TbHopInt7 {
+            get {
+                return ResourceManager.GetString("TbHopInt7", resourceCulture);
             }
         }
         
@@ -3021,6 +3093,15 @@ namespace ServiceLib.Resx {
         public static string TbNotChangeSystemProxy {
             get {
                 return ResourceManager.GetString("TbNotChangeSystemProxy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Parallel Query 的本地化字符串。
+        /// </summary>
+        public static string TbParallelQuery {
+            get {
+                return ResourceManager.GetString("TbParallelQuery", resourceCulture);
             }
         }
         
@@ -3178,11 +3259,29 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 Via proxy — please ensure remote availability 的本地化字符串。
+        ///   查找类似 By default, invoked only during routing for resolution; ensure the remote server can reach this DNS 的本地化字符串。
         /// </summary>
         public static string TbRemoteDNSTips {
             get {
                 return ResourceManager.GetString("TbRemoteDNSTips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Proxy Target Resolution Strategy 的本地化字符串。
+        /// </summary>
+        public static string TbRemoteResolveStrategy {
+            get {
+                return ResourceManager.GetString("TbRemoteResolveStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 If unset or &quot;AsIs&quot;, DNS resolution is performed by the remote server&apos;s DNS; otherwise, the internal DNS module is used. 的本地化字符串。
+        /// </summary>
+        public static string TbRemoteResolveStrategyTips {
+            get {
+                return ResourceManager.GetString("TbRemoteResolveStrategyTips", resourceCulture);
             }
         }
         
@@ -3250,7 +3349,7 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 Full process name (Tun mode) 的本地化字符串。
+        ///   查找类似 Process (Tun mode) 的本地化字符串。
         /// </summary>
         public static string TbRoutingRuleProcess {
             get {
@@ -3322,15 +3421,6 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 sing-box Direct Resolution Strategy 的本地化字符串。
-        /// </summary>
-        public static string TbSBDirectResolveStrategy {
-            get {
-                return ResourceManager.GetString("TbSBDirectResolveStrategy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 sing-box Full Config Template 的本地化字符串。
         /// </summary>
         public static string TbSBFullConfigTemplate {
@@ -3345,15 +3435,6 @@ namespace ServiceLib.Resx {
         public static string TbSBFullConfigTemplateDesc {
             get {
                 return ResourceManager.GetString("TbSBFullConfigTemplateDesc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 sing-box Remote Resolution Strategy 的本地化字符串。
-        /// </summary>
-        public static string TbSBRemoteResolveStrategy {
-            get {
-                return ResourceManager.GetString("TbSBRemoteResolveStrategy", resourceCulture);
             }
         }
         
@@ -3399,6 +3480,15 @@ namespace ServiceLib.Resx {
         public static string TbSelectProfile {
             get {
                 return ResourceManager.GetString("TbSelectProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Serve Stale 的本地化字符串。
+        /// </summary>
+        public static string TbServeStale {
+            get {
+                return ResourceManager.GetString("TbServeStale", resourceCulture);
             }
         }
         
@@ -3673,29 +3763,11 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 Enable additional Inbound 的本地化字符串。
-        /// </summary>
-        public static string TbSettingsEnableExInbound {
-            get {
-                return ResourceManager.GetString("TbSettingsEnableExInbound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Enable fragment 的本地化字符串。
         /// </summary>
         public static string TbSettingsEnableFragment {
             get {
                 return ResourceManager.GetString("TbSettingsEnableFragment", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 which conflicts with the group previous proxy 的本地化字符串。
-        /// </summary>
-        public static string TbSettingsEnableFragmentTips {
-            get {
-                return ResourceManager.GetString("TbSettingsEnableFragmentTips", resourceCulture);
             }
         }
         
@@ -4375,20 +4447,11 @@ namespace ServiceLib.Resx {
         }
         
         /// <summary>
-        ///   查找类似 When configured, validates IPs returned for regional domains (e.g., geosite:cn), returning only expected IPs 的本地化字符串。
+        ///   查找类似 When configured, validates IPs returned for regional domains (e.g., geosite:cn - geoip:cn), returning only expected IPs 的本地化字符串。
         /// </summary>
         public static string TbValidateDirectExpectedIPsDesc {
             get {
                 return ResourceManager.GetString("TbValidateDirectExpectedIPsDesc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 xray Freedom Resolution Strategy 的本地化字符串。
-        /// </summary>
-        public static string TbXrayFreedomStrategy {
-            get {
-                return ResourceManager.GetString("TbXrayFreedomStrategy", resourceCulture);
             }
         }
         

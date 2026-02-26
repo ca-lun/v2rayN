@@ -1021,7 +1021,7 @@
     <value>پروتکل sing-box Mux</value>
   </data>
   <data name="TbRoutingRuleProcess" xml:space="preserve">
-    <value>نام کامل فرانید (حالت Tun)</value>
+    <value>Process (Tun mode)</value>
   </data>
   <data name="TbRoutingRuleIP" xml:space="preserve">
     <value>IP or IP CIDR</value>
@@ -1065,9 +1065,6 @@
   <data name="TbSettingsTunMtu" xml:space="preserve">
     <value>MTU</value>
   </data>
-  <data name="TbSettingsEnableExInbound" xml:space="preserve">
-    <value>فعال سازی additional Inbound</value>
-  </data>
   <data name="TbSettingsEnableIPv6Address" xml:space="preserve">
     <value>فعال سازی آدرس IPv6</value>
   </data>
@@ -1106,9 +1103,6 @@
   </data>
   <data name="menuAddHttpServer" xml:space="preserve">
     <value>افزودن سرور [HTTP]</value>
-  </data>
-  <data name="TbSettingsEnableFragmentTips" xml:space="preserve">
-    <value>which conflicts with the group previous proxy</value>
   </data>
   <data name="TbSettingsEnableFragment" xml:space="preserve">
     <value>فعال کردن فرگمنت</value>
@@ -1413,17 +1407,11 @@
   <data name="TbDomesticDNS" xml:space="preserve">
     <value>Domestic DNS</value>
   </data>
-  <data name="TbRemoteDNSTips" xml:space="preserve">
-    <value>Via proxy — please ensure remote availability</value>
+  <data name="TbDirectResolveStrategy" xml:space="preserve">
+    <value>Direct Target Resolution Strategy</value>
   </data>
-  <data name="TbXrayFreedomStrategy" xml:space="preserve">
-    <value>xray Freedom Resolution Strategy</value>
-  </data>
-  <data name="TbSBDirectResolveStrategy" xml:space="preserve">
-    <value>sing-box Direct Resolution Strategy</value>
-  </data>
-  <data name="TbSBRemoteResolveStrategy" xml:space="preserve">
-    <value>sing-box Remote Resolution Strategy</value>
+  <data name="TbRemoteResolveStrategy" xml:space="preserve">
+    <value>Proxy Target Resolution Strategy</value>
   </data>
   <data name="TbAddCommonDNSHosts" xml:space="preserve">
     <value>Add Common DNS Hosts</value>
@@ -1447,7 +1435,7 @@
     <value>Validate Regional Domain IPs</value>
   </data>
   <data name="TbValidateDirectExpectedIPsDesc" xml:space="preserve">
-    <value>When configured, validates IPs returned for regional domains (e.g., geosite:cn), returning only expected IPs</value>
+    <value>When configured, validates IPs returned for regional domains (e.g., geosite:cn - geoip:cn), returning only expected IPs</value>
   </data>
   <data name="TbCustomDNSEnable" xml:space="preserve">
     <value>Enable Custom DNS</value>
@@ -1640,5 +1628,38 @@ The "Get Certificate" action may fail if a self-signed certificate is used or if
   </data>
   <data name="TbEchForceQuery" xml:space="preserve">
     <value>EchForceQuery</value>
+  </data>
+  <data name="TbFullCertTips" xml:space="preserve">
+    <value>Full certificate (chain), PEM format</value>
+  </data>
+  <data name="TbCertSha256Tips" xml:space="preserve">
+    <value>Certificate fingerprint (SHA-256)</value>
+  </data>
+  <data name="TbServeStale" xml:space="preserve">
+    <value>Serve Stale</value>
+  </data>
+  <data name="TbParallelQuery" xml:space="preserve">
+    <value>Parallel Query</value>
+  </data>
+  <data name="TbDomesticDNSTips" xml:space="preserve">
+    <value>By default, invoked only during routing for resolution</value>
+  </data>
+  <data name="TbRemoteDNSTips" xml:space="preserve">
+    <value>By default, invoked only during routing for resolution; ensure the remote server can reach this DNS</value>
+  </data>
+  <data name="TbDirectResolveStrategyTips" xml:space="preserve">
+    <value>If unset or "AsIs", DNS resolution uses the system DNS; otherwise, the internal DNS module is used.</value>
+  </data>
+  <data name="TbRemoteResolveStrategyTips" xml:space="preserve">
+    <value>If unset or "AsIs", DNS resolution is performed by the remote server's DNS; otherwise, the internal DNS module is used.</value>
+  </data>
+  <data name="TbHopInt7" xml:space="preserve">
+    <value>Port hopping interval</value>
+  </data>
+  <data name="menuServerListPreview" xml:space="preserve">
+    <value>Configuration item preview</value>
+  </data>
+  <data name="TbFinalmask" xml:space="preserve">
+    <value>Finalmask</value>
   </data>
 </root>

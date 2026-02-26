@@ -1018,7 +1018,7 @@
     <value>Protocole de multiplexage Mux (sing-box)</value>
   </data>
   <data name="TbRoutingRuleProcess" xml:space="preserve">
-    <value>Nom complet du processus (mode Tun)</value>
+    <value>Process (Tun mode)</value>
   </data>
   <data name="TbRoutingRuleIP" xml:space="preserve">
     <value>IP ou IP CIDR</value>
@@ -1062,9 +1062,6 @@
   <data name="TbSettingsTunMtu" xml:space="preserve">
     <value>MTU</value>
   </data>
-  <data name="TbSettingsEnableExInbound" xml:space="preserve">
-    <value>Activer un port d’écoute supplémentaire</value>
-  </data>
   <data name="TbSettingsEnableIPv6Address" xml:space="preserve">
     <value>Activer IPv6</value>
   </data>
@@ -1103,9 +1100,6 @@
   </data>
   <data name="menuAddHttpServer" xml:space="preserve">
     <value>Ajouter [HTTP]</value>
-  </data>
-  <data name="TbSettingsEnableFragmentTips" xml:space="preserve">
-    <value>En conflit avec le proxy amont de groupe</value>
   </data>
   <data name="TbSettingsEnableFragment" xml:space="preserve">
     <value>Activer le fragmentation (Fragment)</value>
@@ -1410,17 +1404,11 @@
   <data name="TbDomesticDNS" xml:space="preserve">
     <value>DNS direct</value>
   </data>
-  <data name="TbRemoteDNSTips" xml:space="preserve">
-    <value>Via le proxy ; assurez-vous que le serveur distant est disponible</value>
+  <data name="TbDirectResolveStrategy" xml:space="preserve">
+    <value>Direct Target Resolution Strategy</value>
   </data>
-  <data name="TbXrayFreedomStrategy" xml:space="preserve">
-    <value>Stratégie de résolution xray freedom</value>
-  </data>
-  <data name="TbSBDirectResolveStrategy" xml:space="preserve">
-    <value>Stratégie de résolution directe sing-box</value>
-  </data>
-  <data name="TbSBRemoteResolveStrategy" xml:space="preserve">
-    <value>Stratégie de résolution distante sing-box</value>
+  <data name="TbRemoteResolveStrategy" xml:space="preserve">
+    <value>Proxy Target Resolution Strategy</value>
   </data>
   <data name="TbAddCommonDNSHosts" xml:space="preserve">
     <value>Ajouter des hôtes DNS courants</value>
@@ -1444,7 +1432,7 @@
     <value>Valider les IP des domaines de la région concernée</value>
   </data>
   <data name="TbValidateDirectExpectedIPsDesc" xml:space="preserve">
-    <value>Après config, les IP renvoyées des domaines régionaux (ex. geosite:cn) seront vérifiées ; seules les IP attendues seront retournées.</value>
+    <value>Après config, les IP renvoyées des domaines régionaux (ex. geosite:cn - geoip:cn) seront vérifiées ; seules les IP attendues seront retournées.</value>
   </data>
   <data name="TbCustomDNSEnable" xml:space="preserve">
     <value>Activer le DNS personnalisé</value>
@@ -1600,10 +1588,10 @@
     <value>Certificate Pinning</value>
   </data>
   <data name="TbCertPinningTips" xml:space="preserve">
-    <value>Certificat serveur (format PEM, facultatif)
-Si le certificat est défini, il est fixé et l’option « Ignorer la vérification » est désactivée.
+    <value>Pinned certificate (fill in either one)
+When specified, the certificate will be pinned, and "Allow Insecure" will be disabled.
 
-Si un certificat auto-signé est utilisé ou si le système contient une CA non fiable ou malveillante, l’action « Obtenir le certificat » peut échouer.</value>
+The "Get Certificate" action may fail if a self-signed certificate is used or if the system contains an untrusted or malicious CA.</value>
   </data>
   <data name="TbFetchCert" xml:space="preserve">
     <value>Obtenir le certificat</value>
@@ -1637,5 +1625,38 @@ Si un certificat auto-signé est utilisé ou si le système contient une CA non 
   </data>
   <data name="TbEchForceQuery" xml:space="preserve">
     <value>EchForceQuery</value>
+  </data>
+  <data name="TbFullCertTips" xml:space="preserve">
+    <value>Full certificate (chain), PEM format</value>
+  </data>
+  <data name="TbCertSha256Tips" xml:space="preserve">
+    <value>Certificate fingerprint (SHA-256)</value>
+  </data>
+  <data name="TbServeStale" xml:space="preserve">
+    <value>Serve Stale</value>
+  </data>
+  <data name="TbParallelQuery" xml:space="preserve">
+    <value>Parallel Query</value>
+  </data>
+  <data name="TbDomesticDNSTips" xml:space="preserve">
+    <value>By default, invoked only during routing for resolution</value>
+  </data>
+  <data name="TbRemoteDNSTips" xml:space="preserve">
+    <value>By default, invoked only during routing for resolution; ensure the remote server can reach this DNS</value>
+  </data>
+  <data name="TbDirectResolveStrategyTips" xml:space="preserve">
+    <value>If unset or "AsIs", DNS resolution uses the system DNS; otherwise, the internal DNS module is used.</value>
+  </data>
+  <data name="TbRemoteResolveStrategyTips" xml:space="preserve">
+    <value>If unset or "AsIs", DNS resolution is performed by the remote server's DNS; otherwise, the internal DNS module is used.</value>
+  </data>
+  <data name="TbHopInt7" xml:space="preserve">
+    <value>Port hopping interval</value>
+  </data>
+  <data name="menuServerListPreview" xml:space="preserve">
+    <value>Configuration item preview</value>
+  </data>
+  <data name="TbFinalmask" xml:space="preserve">
+    <value>Finalmask</value>
   </data>
 </root>
