@@ -104,20 +104,6 @@
                                     Height="{StaticResource MenuItemHeight}"
                                     Header="{x:Static resx:ResUI.menuAddHysteria2Server}" />
                                 <MenuItem
-                                    x:Name="menuCheckUpdate"
-                                    Padding="{StaticResource MarginLeftRight8}"
-                                    AutomationProperties.Name="{x:Static resx:ResUI.menuCheckUpdate}">
-                                    <MenuItem.Header>
-                                        <StackPanel Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Margin="{StaticResource MarginRight8}"
-                                                VerticalAlignment="Center"
-                                                Kind="Cloud" />
-                                            <TextBlock Text="{x:Static resx:ResUI.menuCheckUpdate}" />
-                                        </StackPanel>
-                                    </MenuItem.Header>
-                                </MenuItem>
-                                <MenuItem
                                     x:Name="menuAddWireguardServer"
                                     Height="{StaticResource MenuItemHeight}"
                                     Header="{x:Static resx:ResUI.menuAddWireguardServer}" />

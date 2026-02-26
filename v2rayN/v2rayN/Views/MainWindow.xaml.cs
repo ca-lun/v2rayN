@@ -8,7 +8,7 @@ namespace v2rayN.Views;
 public partial class MainWindow
 {
     private static Config _config;
-    private CheckUpdateView? _checkUpdateView;
+
     private BackupAndRestoreView? _backupAndRestoreView;
 
     public MainWindow()
@@ -23,7 +23,6 @@ public partial class MainWindow
         PreviewKeyDown += MainWindow_PreviewKeyDown;
         menuSettingsSetUWP.Click += MenuSettingsSetUWP_Click;
         menuClose.Click += MenuClose_Click;
-        menuCheckUpdate.Click += MenuCheckUpdate_Click;
         menuBackupAndRestore.Click += MenuBackupAndRestore_Click;
 
         ViewModel = new MainWindowViewModel(UpdateViewHandler);
@@ -352,11 +351,7 @@ public partial class MainWindow
         await ViewModel?.ScanImageResult(fileName);
     }
 
-    private void MenuCheckUpdate_Click(object sender, RoutedEventArgs e)
-    {
-        _checkUpdateView ??= new CheckUpdateView();
-        DialogHost.Show(_checkUpdateView, "RootDialog");
-    }
+
 
     private void MenuBackupAndRestore_Click(object sender, RoutedEventArgs e)
     {

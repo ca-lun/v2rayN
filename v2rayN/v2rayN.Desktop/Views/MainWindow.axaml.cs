@@ -10,7 +10,7 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
 {
     private static Config _config;
     private readonly WindowNotificationManager? _manager;
-    private CheckUpdateView? _checkUpdateView;
+
     private BackupAndRestoreView? _backupAndRestoreView;
     private bool _blCloseByUser = false;
 
@@ -23,7 +23,7 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
 
         KeyDown += MainWindow_KeyDown;
         menuSettingsSetUWP.Click += MenuSettingsSetUWP_Click;
-        menuCheckUpdate.Click += MenuCheckUpdate_Click;
+
         menuBackupAndRestore.Click += MenuBackupAndRestore_Click;
         menuClose.Click += MenuClose_Click;
 
@@ -355,11 +355,7 @@ public partial class MainWindow : WindowBase<MainWindowViewModel>
         }
     }
 
-    private void MenuCheckUpdate_Click(object? sender, RoutedEventArgs e)
-    {
-        _checkUpdateView ??= new CheckUpdateView();
-        DialogHost.Show(_checkUpdateView);
-    }
+
 
     private void MenuBackupAndRestore_Click(object? sender, RoutedEventArgs e)
     {
